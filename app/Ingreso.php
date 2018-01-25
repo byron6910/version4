@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Ingreso extends Model
 {
      protected $table='ingreso';
-    protected $primaryKey='id_reserva';
+    protected $primaryKey='id_ingreso';
     protected $fillable=['fecha_ingreso','estado','id'];
     protected $hidden=['created_at','updated_at'];
     

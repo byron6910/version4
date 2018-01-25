@@ -24,6 +24,7 @@
                          <th>Cooperativa</th>
                          <th>Telefono_Cooperativa</th>
                          <th>Correo_Cooperativa</th>
+                         <th>Codigo Barras</th>
                         
                         <th>Opciones</th>
                     </thead>
@@ -41,6 +42,18 @@
                         <td> {{$origen->cooperativa->telefono}}</td>
                         <td> {{$origen->cooperativa->correo}}</td>
 
+                        <td> 
+                            <div>
+                                {!! DNS2D::getBarcodeHTML($origen->id_origen_destino, "QRCODE") !!}
+                            </div>
+                         
+                        </td>
+
+             <style>
+                 .code{
+                    height: 20px ;
+                 }
+             </style>
 
                         
                         <td>

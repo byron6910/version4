@@ -15,7 +15,8 @@
         "laravelcollective/html": "^5.4.0",
         "twilio/sdk": "^5.16",
         "tymon/jwt-auth": "^0.5.12",
-        "nesbot/carbon": "~1.18"
+        "nesbot/carbon": "~1.18",
+        "milon/barcode": "^5.2"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

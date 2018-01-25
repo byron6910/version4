@@ -55,10 +55,10 @@ class IngresoController extends Controller
     {
         
         $users=User::where('verified','1')->get();
-        $detalles=Detalle_Ingreso::all();
+        $origenes=Origen_Destino::all();
        // $origen_destinos=Origen_Destino::all();
 
-        return view('ingreso.create',['users'=>$users,'detalles'=>$detalles]);
+        return view('ingreso.create',['users'=>$users,'origenes'=>$origenes]);
 
     
     }
@@ -107,7 +107,7 @@ class IngresoController extends Controller
         $cont=0;
         while($cont<$count($id_origen_destino)){
             $detalle=new Detalle_Ingreso();
-            $detalle->id_detalle_ingreso=$ingreso->id_ingreso;
+            $detalle->id_ingreso=$ingreso->id_ingreso;
             $detalle->id_origen_destino=$id_origen_destino[$cont];
             $detalle->cantidad=$cantidad[$cont];
             $detalle->precio_compra=$precio_compra[$cont];
